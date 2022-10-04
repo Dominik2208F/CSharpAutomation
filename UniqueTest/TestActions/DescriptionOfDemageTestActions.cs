@@ -21,12 +21,12 @@ namespace UniqueTest
             NewAccidentMasterTestData = new NewAccidentMasterTestData();
         }
 
-        public void VehicleDemageFullfilment()
+        public void VehicleDemageSectionFullfilment()
         {
             DescriptionOfDemagePage.SelectTypeOfDemage();
         }
 
-        public void VehicleDetails()
+        public void VehicleDetailsSectionFullfilment()
         {
             DescriptionOfDemagePage.
                 EnterDemagedVehicleYear(NewAccidentMasterTestData.YearofProduction)

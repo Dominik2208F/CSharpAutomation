@@ -31,6 +31,14 @@ namespace UniqueTest
         public string Brand { get => "BMW"; }
         public string Model { get=> "Seria 3 [E90] 05-08"; }
         public string FirstRegistrationDate { get => "02-02-2008"; }
+        public string IBAN { get => "PL27573289623065912671386189"; }
+
+        public string PostCodeRegistered { get => "00-006"; }
+        
+        public string StreetRegistered { get => "Orzeszkowa"; }
+
+        public string HouseNumberRegistered { get => "2"; }
+        public string ApartmentNUmberRegistered { get => "3"; }
 
 
     }

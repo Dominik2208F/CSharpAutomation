@@ -65,11 +65,17 @@ namespace UniqueTest
          public void DescriptionOfDemageFulffilment()
         {
             DescriptionOfDemageTestActions.PageInit(driver);
-            DescriptionOfDemageTestActions.VehicleDemageFullfilment();
-            DescriptionOfDemageTestActions.VehicleDetails();
+            DescriptionOfDemageTestActions.VehicleDemageSectionFullfilment();
+            DescriptionOfDemageTestActions.VehicleDetailsSectionFullfilment();
         }
         public void PersonalDetailsFulfillment()
         {
+            PersonalDetailsTestActions.InitPage(driver);
+            PersonalDetailsTestActions.VehicleOwnerSectionFullfilment();
+            PersonalDetailsTestActions.MainOwnerPersonalDetailsSectionFullfilment();
+            PersonalDetailsTestActions.MainOwnerRegisteredAdressSectionFullfilment();
+            PersonalDetailsTestActions.AnotherQuestionSectionFullfilment();
+
 
         }
 

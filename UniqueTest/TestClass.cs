@@ -20,6 +20,7 @@ namespace UniqueTest
             Test.GeneralInformationFullfilment();
             Test.CircumstancesofAccidentFullfilment();
             Test.DescriptionOfDemageFulffilment();
+            Test.PersonalDetailsFulfillment();
 
             
         }
