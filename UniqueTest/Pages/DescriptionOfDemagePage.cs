@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -46,30 +47,28 @@ namespace UniqueTest
 
             return this;
         }
-        public DescriptionOfDemagePage EnterDemagedVehicleDatafromProofOfRegistration(string registrationNumber, string vin,string BMW)
+        public DescriptionOfDemagePage EnterDemagedVehicleDatafromProofOfRegistration(string registrationNumber, string vin,string BMW,string Registrationdate)
         {
             DescriptionOfDemageSection.RegistrationNumber.SendKeys(registrationNumber);
             DescriptionOfDemageSection.VinNUmber.SendKeys(vin);
 
-            
+            Thread.Sleep(1000);
             DescriptionOfDemageSection.ChooseMark.Click();
             DescriptionOfDemageSection.ChooseMark.SendKeys(BMW);
-                       
-            
-
-            
-
-
-
-
-
-
+            DescriptionOfDemageSection.ChooseBMW.Click();
+            DescriptionOfDemageSection.ChooseModel.Click();
+            DescriptionOfDemageSection.ChooseSerie3.Click();
+            DescriptionOfDemageSection.FirstRegistrationData.SendKeys(Registrationdate);
+            DescriptionOfDemageSection.CommercialUse.Click();
+            DescriptionOfDemageSection.ButtonOwnerData.Click();
 
 
 
 
             return this;
         }
+
+       
 
     }
 }

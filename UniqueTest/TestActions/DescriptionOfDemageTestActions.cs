@@ -30,7 +30,7 @@ namespace UniqueTest
         {
             DescriptionOfDemagePage.
                 EnterDemagedVehicleYear(NewAccidentMasterTestData.YearofProduction)
-                .EnterDemagedVehicleDatafromProofOfRegistration(NewAccidentMasterTestData.RegistrationNumber, NewAccidentMasterTestData.Vin, NewAccidentMasterTestData.Brand);
+                .EnterDemagedVehicleDatafromProofOfRegistration(NewAccidentMasterTestData.RegistrationNumber, NewAccidentMasterTestData.Vin, NewAccidentMasterTestData.Brand,NewAccidentMasterTestData.FirstRegistrationDate);
         }
 
     }

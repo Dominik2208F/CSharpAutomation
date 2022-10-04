@@ -30,7 +30,7 @@ namespace UniqueTest
         public string Vin { get => "VBBF5435HTJ6RRGY6"; }
         public string Brand { get => "BMW"; }
         public string Model { get=> "Seria 3 [E90] 05-08"; }
-        public string FirstRegistrationDate { get => "01-01-2007"; }
+        public string FirstRegistrationDate { get => "02-02-2008"; }
 
 
     }

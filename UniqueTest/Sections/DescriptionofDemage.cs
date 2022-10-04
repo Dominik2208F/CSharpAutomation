@@ -25,8 +25,12 @@ namespace UniqueTest
         public IWebElement VinNUmber => Driver.FindElement(By.Id("vin-number"));
 
         public IWebElement ChooseMark => Driver.FindElement(By.XPath("//input[@id='car-make']"));
-      
+        public IWebElement ChooseBMW => Driver.FindElement(By.XPath("/html[1]/body[1]/lynx-app-root[1]/lynx-liability-insurance[1]/div[1]/lynx-description-liability-insurance[1]/form[1]/common-card[2]/div[1]/div[2]/common-typeahead[1]/app-fieldset[1]/fieldset[1]/div[1]/typeahead-container[1]/button[1]"));
         public IWebElement ChooseModel => Driver.FindElement(By.XPath("//input[@id='car-model']"));
+        public IWebElement ChooseSerie3 => Driver.FindElement(By.XPath("//span[normalize-space()='Seria 3 Touring [E91] 05-08']"));
+        public IWebElement FirstRegistrationData => Driver.FindElement(By.Id("first-registration-common-datepicker-input"));
+        public IWebElement CommercialUse => Driver.FindElement(By.CssSelector("label[for='vehicle-commercial-use-common-radio-NO']"));
+        public IWebElement ButtonOwnerData => Driver.FindElement(By.Id("next-page"));
         
         
 
