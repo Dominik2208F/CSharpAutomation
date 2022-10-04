@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
+
 
 
 namespace UniqueTest
@@ -54,7 +54,7 @@ namespace UniqueTest
             
             DescriptionOfDemageSection.ChooseMark.Click();
             DescriptionOfDemageSection.ChooseMark.SendKeys(BMW);
-            DescriptionOfDemageSection.           
+                       
             
 
             
