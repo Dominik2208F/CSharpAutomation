@@ -27,16 +27,16 @@ namespace UniqueTest
         public AdditionalInformationPage EnterRegulationsandAgreement()
         {
             WebDriverWait wait1 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            IWebElement ConditionAgreement = wait1.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//label[@for='car-segment-statement-common-checkbox-YES']")));
-            ConditionAgreement.Click();
+           IWebElement ConditionAgreement = wait1.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//label[@for='car-segment-statement-common-checkbox-YES']")));
+           ConditionAgreement.Click();
 
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            IWebElement ConfirmationPopUp = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector(".btn.modal - close - btn.btn - common - success']")));
+           WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+           IWebElement ConfirmationPopUp = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector(".btn.modal - close - btn.btn - common - success']")));
            
-            ConfirmationPopUp.Click();
-            Thread.Sleep(5000);
-           // AdditionalInformationSection.ValueLostAgreement.Click(); 
-           // AdditionalInformationSection.LastPageButton.Click();
+           ConfirmationPopUp.Click();
+           Thread.Sleep(5000);
+           AdditionalInformationSection.ValueLostAgreement.Click(); 
+           AdditionalInformationSection.LastPageButton.Click();
             return this;
         }
     }

@@ -8,7 +8,7 @@ using UniqueTest;
 namespace UniqueTest
 {
     [TestClass]
-    public class TestClass
+    public class TestClass:BrowserSetUp
     {
         
         [TestMethod]
@@ -21,6 +21,7 @@ namespace UniqueTest
             Test.DescriptionOfDemageFulffilment();
             Test.PersonalDetailsFulfillment();
             Test.AdditionalInformationFullfilment();
+            driver.Quit();
         }
 
 
