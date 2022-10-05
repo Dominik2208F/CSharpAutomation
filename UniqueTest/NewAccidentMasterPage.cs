@@ -16,6 +16,7 @@ namespace UniqueTest
         private DescriptionOfDemageTestActions DescriptionOfDemageTestActions { get; }
         private GeneralnformationTestActions GeneralnformationTestActions { get; }
         private PersonalDetailsTestActions PersonalDetailsTestActions { get; }
+        private SummaryPageCheckTestAction SummaryPageCheckTestAction { get; }
 
 
         public NewAccidentMasterPage()
@@ -26,6 +27,7 @@ namespace UniqueTest
             DescriptionOfDemageTestActions = new DescriptionOfDemageTestActions();
             AdditionalInformationTestActions = new AdditionalInformationTestActions();
             PersonalDetailsTestActions = new PersonalDetailsTestActions();
+            SummaryPageCheckTestAction= new SummaryPageCheckTestAction();   
         }
 
         
@@ -80,5 +82,18 @@ namespace UniqueTest
             AdditionalInformationTestActions.RepairandRentSectionFullfilment();
             AdditionalInformationTestActions.RegulationandAgreementSectionFullfilment();
         }
+
+        public void SummaryPageCheck()
+        {
+            SummaryPageCheckTestAction.InitPage(driver);
+            SummaryPageCheckTestAction.SummaryPageChekPolicyNumberSection();
+        }
+
+         public bool DriverQuite()
+        {
+            driver.Quit();
+            return true;
+        }
+
     }
 }

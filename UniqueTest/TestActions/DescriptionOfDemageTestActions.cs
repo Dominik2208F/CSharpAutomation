@@ -10,8 +10,8 @@ namespace UniqueTest
     public class DescriptionOfDemageTestActions
     {
 
-        public IWebDriver driver;
-        public DescriptionOfDemagePage DescriptionOfDemagePage { get; set; }
+       public IWebDriver driver;
+       public DescriptionOfDemagePage DescriptionOfDemagePage { get; set; }
        public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
         public void PageInit(IWebDriver driver)

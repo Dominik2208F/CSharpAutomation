@@ -15,10 +15,9 @@ namespace UniqueTest
     public class GeneralInformation
     {
         public  IWebDriver Driver;
-
         public  GeneralInformation(IWebDriver driver )
         {
-            this.Driver = driver;
+           this.Driver = driver;
         }      
         public IWebElement PolicyNumber => Driver.FindElement(By.Id("policy-number"));
         public IWebElement RegistrationNUmber => Driver.FindElement(By.XPath("//input[@id='registration-number']"));

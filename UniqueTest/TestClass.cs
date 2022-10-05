@@ -21,7 +21,12 @@ namespace UniqueTest
             Test.DescriptionOfDemageFulffilment();
             Test.PersonalDetailsFulfillment();
             Test.AdditionalInformationFullfilment();
-            driver.Quit();
+            Test.SummaryPageCheck();
+
+            if (Test.DriverQuite())
+            {
+                Console.WriteLine("Test completed");
+            }
         }
 
 

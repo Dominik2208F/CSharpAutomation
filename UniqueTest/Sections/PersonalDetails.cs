@@ -11,7 +11,7 @@ namespace UniqueTest
     {
         public IWebDriver Driver;
 
-        public PersonalDetails(IWebDriver driver)
+        public  PersonalDetails(IWebDriver driver)
         {
             this.Driver = driver;
         }
