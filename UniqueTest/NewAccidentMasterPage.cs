@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using System;
 using UniqueTest;
-using UniqueTest.TestActions;
+
 
 namespace UniqueTest
 {
@@ -11,7 +11,7 @@ namespace UniqueTest
     {
         IWebDriver driver;
         private BrowserSetUp BrowserSetUp { get; }
-        private GeneralnformationTestActions GeneralnformationTestActionset { get; }
+        private AdditionalInformationTestActions AdditionalInformationTestActions { get; }
         private CircumstancesOfAccidentTestActions CircumstancesOfAccidentTestAction { get; }
         private DescriptionOfDemageTestActions DescriptionOfDemageTestActions { get; }
         private GeneralnformationTestActions GeneralnformationTestActions { get; }
@@ -24,7 +24,7 @@ namespace UniqueTest
             GeneralnformationTestActions = new GeneralnformationTestActions();
             CircumstancesOfAccidentTestAction = new CircumstancesOfAccidentTestActions();
             DescriptionOfDemageTestActions = new DescriptionOfDemageTestActions();
-            GeneralnformationTestActions = new GeneralnformationTestActions();
+            AdditionalInformationTestActions = new AdditionalInformationTestActions();
             PersonalDetailsTestActions = new PersonalDetailsTestActions();
         }
 
@@ -81,6 +81,9 @@ namespace UniqueTest
 
         public  void AdditionalInformationFullfilment()
         {
+            AdditionalInformationTestActions.InitPage(driver);
+            AdditionalInformationTestActions.RepairandRentSectionFullfilment();
+            AdditionalInformationTestActions.RegulationandAgreementSectionFullfilment();
 
         }
         

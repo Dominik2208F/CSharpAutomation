@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UniqueTest;
-using UniqueTest.TestActions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 

@@ -60,8 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserSetUp.cs" />
+    <Compile Include="Pages\AdditionalInformationPage.cs" />
     <Compile Include="Pages\PersonalDetailsPage.cs" />
     <Compile Include="Pages\DescriptionOfDemagePage.cs" />
+    <Compile Include="Sections\AdditionalInformation.cs" />
     <Compile Include="Sections\PersonalDetails.cs" />
     <Compile Include="Sections\DescriptionofDemage.cs" />
     <Compile Include="TestClass.cs" />

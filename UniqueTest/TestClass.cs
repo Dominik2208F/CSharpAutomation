@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using System;
 using UniqueTest;
-using UniqueTest.TestActions;
+
 
 
 namespace UniqueTest
@@ -21,8 +21,10 @@ namespace UniqueTest
             Test.CircumstancesofAccidentFullfilment();
             Test.DescriptionOfDemageFulffilment();
             Test.PersonalDetailsFulfillment();
+            Test.AdditionalInformationFullfilment();
 
-            
+
+
         }
 
 
