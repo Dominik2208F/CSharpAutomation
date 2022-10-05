@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
@@ -12,6 +13,7 @@ namespace UniqueTest
 {
     public class AdditionalInformationPage: BrowserSetUp
     {
+        
         public AdditionalInformation AdditionalInformationSection { get; set; }
         public AdditionalInformationPage(IWebDriver driver)
         {
@@ -26,18 +28,15 @@ namespace UniqueTest
     }
         public AdditionalInformationPage EnterRegulationsandAgreement()
         {
-            WebDriverWait wait1 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-           IWebElement ConditionAgreement = wait1.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//label[@for='car-segment-statement-common-checkbox-YES']")));
-           ConditionAgreement.Click();
-
-           WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-           IWebElement ConfirmationPopUp = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector(".btn.modal - close - btn.btn - common - success']")));
-           
-           ConfirmationPopUp.Click();
-           Thread.Sleep(5000);
+            IWebElement element = driver.FindElement(By.XPath("//label[@for='car-segment-statement-common-checkbox-YES']"));
+            Actions actions = new Actions(driver);
+            actions.MoveToElement(element).Click().Perform();
+            IWebElement Element1 = driver.FindElement(By.CssSelector(".btn.modal-close-btn.btn-common-success"));
+            IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
+            jse.ExecuteScript("arguments[0].click()", Element1);
            AdditionalInformationSection.ValueLostAgreement.Click(); 
            AdditionalInformationSection.LastPageButton.Click();
-            return this;
+           return this;
         }
     }
 }

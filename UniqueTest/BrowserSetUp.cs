@@ -14,7 +14,7 @@ namespace UniqueTest
         
         public static IWebDriver driver;
 
-        public IWebDriver BrowserInit()
+        public static IWebDriver BrowserInit()
         {
             driver = new ChromeDriver();
                 return driver;

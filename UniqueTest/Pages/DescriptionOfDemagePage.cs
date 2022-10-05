@@ -42,7 +42,7 @@ namespace UniqueTest
         {
             DescriptionOfDemageSection.RegistrationNumber.SendKeys(registrationNumber);
             DescriptionOfDemageSection.VinNUmber.SendKeys(vin);
-            Thread.Sleep(1000);
+            DescriptionOfDemageSection.WebsiteLoad();
             DescriptionOfDemageSection.ChooseMark.Click();
             DescriptionOfDemageSection.ChooseMark.SendKeys(BMW);
             DescriptionOfDemageSection.ChooseBMW.Click();

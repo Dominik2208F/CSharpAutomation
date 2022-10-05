@@ -5,15 +5,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace UniqueTest
 {
-    public class PersonalDetailsPage
+    public class PersonalDetailsPage:BrowserSetUp
     {
-
-        public IWebDriver driver;
-
-
+        
 
         public PersonalDetails PersonalDetailsSection { get; set; }
 
@@ -28,10 +26,11 @@ namespace UniqueTest
 
             return this;
         }
-        public PersonalDetailsPage EnterMainOwnerDetails(string Pesel,string name, string surname, string phoneNumber,string email, string IBAN)
+        public PersonalDetailsPage EnterMainOwnerDetails(string Peselinner,string name, string surname, string phoneNumber,string email, string IBAN)
         {
-            Thread.Sleep(1000);
-            PersonalDetailsSection.PersonOwnerPesel.SendKeys(Pesel);
+            WebDriverWait WaitForPesel = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
+            IWebElement Pesel = WaitForPesel.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("PERSON_OWNER_DATA-pesel")));
+            Pesel.SendKeys(Peselinner);
             PersonalDetailsSection.PersonOwnerName.SendKeys(name);
             PersonalDetailsSection.PersonOwnerSurname.SendKeys(surname);
             PersonalDetailsSection.PersonOwnerPhoneNumber.SendKeys(phoneNumber);

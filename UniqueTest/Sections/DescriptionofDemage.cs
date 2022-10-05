@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
@@ -30,5 +31,10 @@ namespace UniqueTest
         public IWebElement FirstRegistrationData => Driver.FindElement(By.Id("first-registration-common-datepicker-input"));
         public IWebElement CommercialUse => Driver.FindElement(By.CssSelector("label[for='vehicle-commercial-use-common-radio-NO']"));
         public IWebElement ButtonOwnerData => Driver.FindElement(By.Id("next-page"));
+        
+        public  void WebsiteLoad()
+        {
+            Thread.Sleep(1000);
+        }
     }
 }
