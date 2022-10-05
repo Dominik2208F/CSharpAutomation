@@ -14,7 +14,7 @@ namespace UniqueTest
         [TestMethod]
         public void AccidentTest()
         {
-            NewAccidentMasterPage Test = new NewAccidentMasterPage();
+            var Test = new NewAccidentMasterPage();
             Test.BrowserSetUpFullfilment();
             Test.GeneralInformationFullfilment();
             Test.CircumstancesofAccidentFullfilment();

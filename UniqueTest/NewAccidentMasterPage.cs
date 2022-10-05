@@ -56,6 +56,7 @@ namespace UniqueTest
             CircumstancesOfAccidentTestAction.ReasonsofAccidentSectionFullfilment();
             CircumstancesOfAccidentTestAction.DescriptionofAccidentSectionFullfilment();
             CircumstancesOfAccidentTestAction.AciddentQuestionsFulffilment();
+            
         }
 
          public void DescriptionOfDemageFulffilment()
@@ -64,7 +65,7 @@ namespace UniqueTest
             DescriptionOfDemageTestActions.VehicleDemageSectionFullfilment();
             DescriptionOfDemageTestActions.VehicleDetailsSectionFullfilment();
         }
-        public void PersonalDetailsFulfillment()
+         public void PersonalDetailsFulfillment()
         {
             PersonalDetailsTestActions.InitPage(driver);
             PersonalDetailsTestActions.VehicleOwnerSectionFullfilment();
