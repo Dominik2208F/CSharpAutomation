@@ -12,29 +12,20 @@ namespace UniqueTest
     public class GeneralnformationTestActions
     {
         public IWebDriver driver;
-
-        
-
         public GeneralInformationPage GeneralInformationPage { get;set; }
         public NewAccidentMasterTestData NewAccidentMasterTestData { get;set; }
-
-
         public void InitPage(IWebDriver driver)
         {
             GeneralInformationPage = new GeneralInformationPage(driver);
-            NewAccidentMasterTestData = new NewAccidentMasterTestData();
-            
+            NewAccidentMasterTestData = new NewAccidentMasterTestData();   
         }
 
 
         public void PolicyNumberSectionFullfilment()
         {
-
-
             GeneralInformationPage.
                 EnterPolicyNumber(NewAccidentMasterTestData.PolicyNumber)
-                .EnterRegistrationNumber(NewAccidentMasterTestData.RegistrationNumber);
-               
+                .EnterRegistrationNumber(NewAccidentMasterTestData.RegistrationNumber);            
         }
 
         public void PersonalDetailsSectionFullfilment()

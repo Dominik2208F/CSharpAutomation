@@ -19,14 +19,12 @@ namespace UniqueTest
         {
             PersonalDetailsPageSection = new AdditionalInformationPage(driver);
             NewAccidentMasterTestData = new NewAccidentMasterTestData();
-
         }
 
         public void RepairandRentSectionFullfilment()
         {
             PersonalDetailsPageSection
-                .EnterCarandRentSection();
-                
+                .EnterCarandRentSection();    
         }
 
         public void RegulationandAgreementSectionFullfilment()

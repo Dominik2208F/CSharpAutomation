@@ -11,7 +11,6 @@ namespace UniqueTest
     {
 
         public IWebDriver driver;
-
         public DescriptionOfDemagePage DescriptionOfDemagePage { get; set; }
         public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 

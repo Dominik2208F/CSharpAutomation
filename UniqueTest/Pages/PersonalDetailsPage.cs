@@ -21,7 +21,6 @@ namespace UniqueTest
         {
             PersonalDetailsSection = new PersonalDetails(driver);
         }
-
         public PersonalDetailsPage EnterVehicleOwner()
         {
 
@@ -29,7 +28,6 @@ namespace UniqueTest
 
             return this;
         }
-
         public PersonalDetailsPage EnterMainOwnerDetails(string Pesel,string name, string surname, string phoneNumber,string email, string IBAN)
         {
             Thread.Sleep(1000);
@@ -39,9 +37,6 @@ namespace UniqueTest
             PersonalDetailsSection.PersonOwnerPhoneNumber.SendKeys(phoneNumber);
             PersonalDetailsSection.PersonOwnerEmail.SendKeys(email);
             PersonalDetailsSection.AccountOwnerNUmber.SendKeys(IBAN);
-
-
-
             return this;
         }
         public PersonalDetailsPage EnterOwnerRegisteredAdress(string postalcode, string streetowner, string housenumber, string apartamentnumber)
@@ -52,8 +47,6 @@ namespace UniqueTest
             PersonalDetailsSection.HouseRegistered.SendKeys(housenumber);
             PersonalDetailsSection.NumberHouseRegistered.SendKeys(apartamentnumber);
             PersonalDetailsSection.IsAdressThesame.Click();
-
-
             return this;
         }
 

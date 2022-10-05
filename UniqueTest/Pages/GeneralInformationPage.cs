@@ -12,11 +12,7 @@ namespace UniqueTest
     public class GeneralInformationPage
     {
         public IWebDriver driver;
-        
-            
-
         public GeneralInformation GeneralInformationSection { get; set; }
-
         public GeneralInformationPage(IWebDriver  driver)
         {
             GeneralInformationSection = new GeneralInformation(driver);
@@ -27,8 +23,7 @@ namespace UniqueTest
         // funkcje ze zmiennymi wywoływane na testactions
 
         public GeneralInformationPage EnterPolicyNumber(string number)
-        {
-            
+        { 
             GeneralInformationSection.PolicyNumber.Click();
             GeneralInformationSection.PolicyNumber.SendKeys(number);
             return this;
@@ -38,16 +33,13 @@ namespace UniqueTest
         {
             GeneralInformationSection.RegistrationNUmber.Click();
             GeneralInformationSection.RegistrationNUmber.SendKeys(numberRegistration);
-
             return this;
         }
         public GeneralInformationPage EnterPolicyHolderData(string PolicyHolderName, string PolicyHolderSurname,string PolicyHolderPesel)
         {
-            
             GeneralInformationSection.PolicyHolderName.SendKeys(PolicyHolderName);
             GeneralInformationSection.PolicyHolderSurname.SendKeys(PolicyHolderSurname);
             GeneralInformationSection.PolicyHolderPesel.SendKeys(PolicyHolderPesel);
-
             return this;
         }
         public GeneralInformationPage EnterHouseDetails(string Street, string HouseNumber,string ApartamentNumber)
@@ -60,7 +52,6 @@ namespace UniqueTest
         public GeneralInformationPage EnterPostcode( string Poscode)
         {
             GeneralInformationSection.Postcode.SendKeys(Poscode);
-
             return this;
         }
         public GeneralInformationPage EnterPersonalContantDetail(string Phone, string Email,string EmailConfirmation)
@@ -79,7 +70,6 @@ namespace UniqueTest
             GeneralInformationSection.DateMinutes.SendKeys(minutes);
             GeneralInformationSection.DateofAccicent.Click();
             GeneralInformationSection.NextPageButtonToCircumstances.Click();
-
             return this;
         }
     }

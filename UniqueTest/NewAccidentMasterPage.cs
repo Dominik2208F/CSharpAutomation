@@ -32,8 +32,6 @@ namespace UniqueTest
 
         public void BrowserSetUpFullfilment()
         {
-
-
            driver= BrowserSetUp.BrowserInit();
 
             BrowserSetUp.
@@ -45,7 +43,6 @@ namespace UniqueTest
         public void GeneralInformationFullfilment()
         {
             GeneralnformationTestActions.InitPage(driver);
-            
             GeneralnformationTestActions.PolicyNumberSectionFullfilment();
             GeneralnformationTestActions.PersonalDetailsSectionFullfilment();
             GeneralnformationTestActions.AccidentTimeSectionFullfilement();
@@ -59,7 +56,6 @@ namespace UniqueTest
             CircumstancesOfAccidentTestAction.ReasonsofAccidentSectionFullfilment();
             CircumstancesOfAccidentTestAction.DescriptionofAccidentSectionFullfilment();
             CircumstancesOfAccidentTestAction.AciddentQuestionsFulffilment();
-
         }
 
          public void DescriptionOfDemageFulffilment()
@@ -75,19 +71,13 @@ namespace UniqueTest
             PersonalDetailsTestActions.MainOwnerPersonalDetailsSectionFullfilment();
             PersonalDetailsTestActions.MainOwnerRegisteredAdressSectionFullfilment();
             PersonalDetailsTestActions.AnotherQuestionSectionFullfilment();
-
-
         }
 
-        public  void AdditionalInformationFullfilment()
+        public void AdditionalInformationFullfilment()
         {
             AdditionalInformationTestActions.InitPage(driver);
             AdditionalInformationTestActions.RepairandRentSectionFullfilment();
             AdditionalInformationTestActions.RegulationandAgreementSectionFullfilment();
-
         }
-        
-           
-
     }
 }

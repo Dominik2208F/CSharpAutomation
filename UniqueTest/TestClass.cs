@@ -15,16 +15,12 @@ namespace UniqueTest
         public void AccidentTest()
         {
             NewAccidentMasterPage Test = new NewAccidentMasterPage();
-
             Test.BrowserSetUpFullfilment();
             Test.GeneralInformationFullfilment();
             Test.CircumstancesofAccidentFullfilment();
             Test.DescriptionOfDemageFulffilment();
             Test.PersonalDetailsFulfillment();
             Test.AdditionalInformationFullfilment();
-
-
-
         }
 
 

@@ -23,16 +23,9 @@ namespace UniqueTest
         public DescriptionOfDemagePage(IWebDriver driver)
         {
             DescriptionOfDemageSection = new DescriptionOfDemage(driver);
-            
-
         }
-
-
-
         public DescriptionOfDemagePage SelectTypeOfDemage()
         {
-            
-
             DescriptionOfDemageSection.ChooseDemagedPart.Click();
             DescriptionOfDemageSection.TypeBumper.SendKeys("Błotnik przedni (lewy)");
             DescriptionOfDemageSection.FrontBumper.Click();
@@ -43,15 +36,12 @@ namespace UniqueTest
         public DescriptionOfDemagePage  EnterDemagedVehicleYear(string year)
         {
             DescriptionOfDemageSection.YearofProduction.SendKeys(year);
-
-
             return this;
         }
         public DescriptionOfDemagePage EnterDemagedVehicleDatafromProofOfRegistration(string registrationNumber, string vin,string BMW,string Registrationdate)
         {
             DescriptionOfDemageSection.RegistrationNumber.SendKeys(registrationNumber);
             DescriptionOfDemageSection.VinNUmber.SendKeys(vin);
-
             Thread.Sleep(1000);
             DescriptionOfDemageSection.ChooseMark.Click();
             DescriptionOfDemageSection.ChooseMark.SendKeys(BMW);
@@ -61,10 +51,6 @@ namespace UniqueTest
             DescriptionOfDemageSection.FirstRegistrationData.SendKeys(Registrationdate);
             DescriptionOfDemageSection.CommercialUse.Click();
             DescriptionOfDemageSection.ButtonOwnerData.Click();
-
-
-
-
             return this;
         }
 

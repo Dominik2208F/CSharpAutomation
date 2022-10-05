@@ -11,7 +11,6 @@ namespace UniqueTest
     {
 
         public IWebDriver driver;
-
         public CircumstancesofAccidentPage CircumstancesOfAccidentPage { get; set; }
         public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
@@ -20,7 +19,6 @@ namespace UniqueTest
             CircumstancesOfAccidentPage = new CircumstancesofAccidentPage(driver);
             NewAccidentMasterTestData = new NewAccidentMasterTestData();
     }
-
         public void PlaceofAccidentSectionFullfilment()
         {
             CircumstancesOfAccidentPage.EnterPlaceofAccident(NewAccidentMasterTestData.PLaceofAccident);

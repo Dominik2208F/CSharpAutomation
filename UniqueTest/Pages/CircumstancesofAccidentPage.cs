@@ -11,14 +11,10 @@ namespace UniqueTest
     {
         public IWebDriver driver;
 
-
-
         public CircumstancesofAccident CircumstancesofAccidentSection { get; set; }
-
         public CircumstancesofAccidentPage(IWebDriver driver)
         {
             CircumstancesofAccidentSection = new CircumstancesofAccident(driver);
-
         }
            public CircumstancesofAccidentPage EnterPlaceofAccident(string place)
         {
@@ -28,10 +24,8 @@ namespace UniqueTest
          public CircumstancesofAccidentPage EnterNumberofCarInAccident(string numberofCar)
         {
             CircumstancesofAccidentSection.NumberOfCarInvolded.SendKeys(numberofCar);
-
             return this;
         }
-          
         public CircumstancesofAccidentPage EnterReasonofAccident()
         {
             CircumstancesofAccidentSection.ReasonsOfAccient.Click();
@@ -51,7 +45,6 @@ namespace UniqueTest
             CircumstancesofAccidentSection.Airbag.Click();
             CircumstancesofAccidentSection.SufferedInjuring.Click();
             CircumstancesofAccidentSection.NextPageButtonToVehicleDesription.Click();
-
             return this;
         }
 

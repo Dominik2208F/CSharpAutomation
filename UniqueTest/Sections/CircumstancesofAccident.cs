@@ -16,7 +16,6 @@ namespace UniqueTest
         {
             this.Driver = driver;
         }
-
         public IWebElement PlaceofAccident => Driver.FindElement(By.Id("place-accident"));
         public IWebElement NumberOfCarInvolded => Driver.FindElement(By.Id("number-of-cars-involved-in-accident"));
         public IWebElement ReasonsOfAccient => Driver.FindElement(By.CssSelector("label[for= 'incident-cause-type-common-radio-VEHICLE']"));
