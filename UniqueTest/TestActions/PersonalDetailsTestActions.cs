@@ -13,12 +13,12 @@ namespace UniqueTest
         public IWebDriver driver;
 
         public PersonalDetailsPage PersonalDetailsPageSection { get; set; }
-        public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
+      //  public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
         public void InitPage(IWebDriver driver)
         {
             PersonalDetailsPageSection = new PersonalDetailsPage(driver);
-            NewAccidentMasterTestData = new NewAccidentMasterTestData();
+        //    NewAccidentMasterTestData = new NewAccidentMasterTestData(); lub static property
 
         }
         public void VehicleOwnerSectionFullfilment()
@@ -28,19 +28,11 @@ namespace UniqueTest
 
         public void MainOwnerPersonalDetailsSectionFullfilment()
         {
-            PersonalDetailsPageSection.EnterMainOwnerDetails(NewAccidentMasterTestData.PolcyHolderPesel,
-                NewAccidentMasterTestData.PolicyHolderName, 
-                NewAccidentMasterTestData.PolicyHolderSurname, 
-                NewAccidentMasterTestData.PhoneNumber, 
-                NewAccidentMasterTestData.emailAdres, 
-                NewAccidentMasterTestData.IBAN);
+            PersonalDetailsPageSection.EnterMainOwnerDetails( NewAccidentMasterTestData.PolcyHolderPesel,NewAccidentMasterTestData.GetMainOvnerDetails());
         }
         public void MainOwnerRegisteredAdressSectionFullfilment()
         {
-            PersonalDetailsPageSection.EnterOwnerRegisteredAdress(NewAccidentMasterTestData.PostCodeRegistered,
-                NewAccidentMasterTestData.StreetRegistered,
-                NewAccidentMasterTestData.HouseNumberRegistered,
-                NewAccidentMasterTestData.ApartmentNUmberRegistered);
+            PersonalDetailsPageSection.EnterOwnerRegisteredAdress(NewAccidentMasterTestData.GetRegisteredDetails());
         }
         public void AnotherQuestionSectionFullfilment()
         {

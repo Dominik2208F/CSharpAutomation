@@ -13,11 +13,11 @@ namespace UniqueTest
     {
         public IWebDriver driver;
         public GeneralInformationPage GeneralInformationPage { get;set; }
-        public NewAccidentMasterTestData NewAccidentMasterTestData { get;set; }
+     //   public NewAccidentMasterTestData NewAccidentMasterTestData { get;set; }
         public void InitPage(IWebDriver driver)
         {
             GeneralInformationPage = new GeneralInformationPage(driver);
-            NewAccidentMasterTestData = new NewAccidentMasterTestData();   
+            //  NewAccidentMasterTestData = new NewAccidentMasterTestData();   lub static property 
         }
 
 

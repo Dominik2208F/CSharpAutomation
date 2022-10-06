@@ -12,12 +12,12 @@ namespace UniqueTest
         public IWebDriver driver;
 
         public SummaryPageCheckPage SummaryPageCheckTestActionSection { get; set; }
-        public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
+       // public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
         public void InitPage(IWebDriver driver)
         {
             SummaryPageCheckTestActionSection = new SummaryPageCheckPage(driver);
-            NewAccidentMasterTestData = new NewAccidentMasterTestData();
+            //  NewAccidentMasterTestData = new NewAccidentMasterTestData(); lub static property
 
         }
 

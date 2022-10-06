@@ -11,7 +11,7 @@ namespace UniqueTest
     public class TestClass:BrowserSetUp
     {
         
-        [TestMethod]
+        [TestMethod]     
         public void AccidentTest()
         {
             var Test = new NewAccidentMasterPage();

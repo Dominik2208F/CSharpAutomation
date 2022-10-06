@@ -16,7 +16,7 @@ namespace UniqueTest
             this.Driver = driver;
         }
 
-       public  String ExpectedPolicyNumber = "55555555";
+       public static String ExpectedPolicyNumber = "55555555";
 
 
     }

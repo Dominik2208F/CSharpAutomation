@@ -13,8 +13,8 @@ namespace UniqueTest
 
 
     public IWebDriver driver;
-    public SummaryCheck SummaryCheck { get; set; }
-    public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
+       public SummaryCheck SummaryCheck { get; set; }
+       // public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
 
         public PersonalDetails PersonalDetailsSection { get; set; }
@@ -22,20 +22,14 @@ namespace UniqueTest
         public SummaryPageCheckPage(IWebDriver driver)
         {
             SummaryCheck = new SummaryCheck(driver);
-            NewAccidentMasterTestData = new NewAccidentMasterTestData();
+       //     NewAccidentMasterTestData = new NewAccidentMasterTestData();
         }
 
 
         public SummaryPageCheckPage CheckPolicyNumberFields()
         {
-
-            
-
             Assert.AreEqual(NewAccidentMasterTestData.PolicyNumber,SummaryCheck.ExpectedPolicyNumber);
             Console.WriteLine("Policy Number is correct");
-            
-           
-
             return this;
         }
 

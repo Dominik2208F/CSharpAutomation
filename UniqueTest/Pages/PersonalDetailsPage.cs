@@ -26,25 +26,25 @@ namespace UniqueTest
 
             return this;
         }
-        public PersonalDetailsPage EnterMainOwnerDetails(string Peselinner,string name, string surname, string phoneNumber,string email, string IBAN)
+        public PersonalDetailsPage EnterMainOwnerDetails(string Peselinner, NewAccidentMasterTestData.MainOwnerDetail MainOwnerDetailsValues)
         {
             WebDriverWait WaitForPesel = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
             IWebElement Pesel = WaitForPesel.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("PERSON_OWNER_DATA-pesel")));
             Pesel.SendKeys(Peselinner);
-            PersonalDetailsSection.PersonOwnerName.SendKeys(name);
-            PersonalDetailsSection.PersonOwnerSurname.SendKeys(surname);
-            PersonalDetailsSection.PersonOwnerPhoneNumber.SendKeys(phoneNumber);
-            PersonalDetailsSection.PersonOwnerEmail.SendKeys(email);
-            PersonalDetailsSection.AccountOwnerNUmber.SendKeys(IBAN);
+            PersonalDetailsSection.PersonOwnerName.SendKeys(MainOwnerDetailsValues.Name);
+            PersonalDetailsSection.PersonOwnerSurname.SendKeys(MainOwnerDetailsValues.Surname);
+            PersonalDetailsSection.PersonOwnerPhoneNumber.SendKeys(MainOwnerDetailsValues.PhoneNUmber);
+            PersonalDetailsSection.PersonOwnerEmail.SendKeys(MainOwnerDetailsValues.Email);
+            PersonalDetailsSection.AccountOwnerNUmber.SendKeys(MainOwnerDetailsValues.IBAN);
             return this;
         }
-        public PersonalDetailsPage EnterOwnerRegisteredAdress(string postalcode, string streetowner, string housenumber, string apartamentnumber)
+        public PersonalDetailsPage EnterOwnerRegisteredAdress( NewAccidentMasterTestData.RegisteredDetails RegisteredDetailsValues)
         {
 
-            PersonalDetailsSection.PostCodeRegistered.SendKeys(postalcode);
-            PersonalDetailsSection.StreetRegistered.SendKeys(streetowner);
-            PersonalDetailsSection.HouseRegistered.SendKeys(housenumber);
-            PersonalDetailsSection.NumberHouseRegistered.SendKeys(apartamentnumber);
+            PersonalDetailsSection.PostCodeRegistered.SendKeys(RegisteredDetailsValues.PostalCode);
+            PersonalDetailsSection.StreetRegistered.SendKeys(RegisteredDetailsValues.Street);
+            PersonalDetailsSection.HouseRegistered.SendKeys(RegisteredDetailsValues.House);
+            PersonalDetailsSection.NumberHouseRegistered.SendKeys(RegisteredDetailsValues.Apartment);
             PersonalDetailsSection.IsAdressThesame.Click();
             return this;
         }
