@@ -12,12 +12,12 @@ namespace UniqueTest
 
         public IWebDriver driver;
         public CircumstancesofAccidentPage CircumstancesOfAccidentPage { get; set; }
-        public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
+      //  public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
         public void PageInit(IWebDriver driver)
         {
             CircumstancesOfAccidentPage = new CircumstancesofAccidentPage(driver);
-            NewAccidentMasterTestData = new NewAccidentMasterTestData();
+           // NewAccidentMasterTestData = new NewAccidentMasterTestData();
     }
         public void PlaceofAccidentSectionFullfilment()
         {

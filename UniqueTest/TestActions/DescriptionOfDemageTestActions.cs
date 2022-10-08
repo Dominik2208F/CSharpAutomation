@@ -12,12 +12,12 @@ namespace UniqueTest
 
        public IWebDriver driver;
        public DescriptionOfDemagePage DescriptionOfDemagePage { get; set; }
-       public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
+     //  public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
         public void PageInit(IWebDriver driver)
         {
             DescriptionOfDemagePage = new DescriptionOfDemagePage(driver);
-           NewAccidentMasterTestData = new NewAccidentMasterTestData();
+         //  NewAccidentMasterTestData = new NewAccidentMasterTestData();
         }
 
         public void VehicleDemageSectionFullfilment()

@@ -13,12 +13,12 @@ namespace UniqueTest
         public IWebDriver driver;
 
         public AdditionalInformationPage PersonalDetailsPageSection { get; set; }
-        public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
+     //   public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 
         public void InitPage(IWebDriver driver)
         {
             PersonalDetailsPageSection = new AdditionalInformationPage(driver);
-            NewAccidentMasterTestData = new NewAccidentMasterTestData();
+           // NewAccidentMasterTestData = new NewAccidentMasterTestData();
         }
 
         public void RepairandRentSectionFullfilment()
