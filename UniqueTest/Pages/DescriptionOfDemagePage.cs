@@ -8,13 +8,9 @@ namespace UniqueTest
 {
     public class DescriptionOfDemagePage
     {
-     
-
-
 
         public DescriptionOfDemage DescriptionOfDemageSection { get; set; }
         
-
         public DescriptionOfDemagePage(IWebDriver driver)
         {
             DescriptionOfDemageSection = new DescriptionOfDemage(driver);

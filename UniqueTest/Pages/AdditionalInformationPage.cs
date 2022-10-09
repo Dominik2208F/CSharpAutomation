@@ -7,7 +7,6 @@ namespace UniqueTest
 {
     public class AdditionalInformationPage: BrowserSetUp
     {
-        
         public AdditionalInformation AdditionalInformationSection { get; set; }
         public AdditionalInformationPage(IWebDriver driver)
         {

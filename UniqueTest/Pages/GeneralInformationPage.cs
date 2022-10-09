@@ -6,16 +6,12 @@ namespace UniqueTest
 {
     public class GeneralInformationPage
     {
-       
+  
         public GeneralInformation GeneralInformationSection { get; set; }
         public GeneralInformationPage(IWebDriver  driver)
         {
             GeneralInformationSection = new GeneralInformation(driver);
         }
-
-        // tu znajduja się definicje funkcji 
-        // zmienne będą przechowywane w Sections
-        // funkcje ze zmiennymi wywoływane na testactions
 
         public GeneralInformationPage EnterPolicyNumber(string number)
         { 

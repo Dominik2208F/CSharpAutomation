@@ -26,7 +26,7 @@ namespace UniqueTest
         public SummaryPageCheckPage CheckPolicyNumberFields()
         {
             Assert.AreEqual(NewAccidentMasterTestData.PolicyNumber,SummaryCheck.ExpectedPolicyNumber);
-            Console.WriteLine("Policy Number is correct");
+            Console.WriteLine("Numer polisy został wygenerowany");
             return this;
         }
 
