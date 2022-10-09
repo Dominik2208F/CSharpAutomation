@@ -1,7 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿
 using OpenQA.Selenium;
-using System;
-using UniqueTest;
+
 
 
 namespace UniqueTest
@@ -9,7 +8,8 @@ namespace UniqueTest
     
     public class NewAccidentMasterPage
     {
-        IWebDriver driver;
+       
+        
         private BrowserSetUp BrowserSetUp { get; }
         private AdditionalInformationTestActions AdditionalInformationTestActions { get; }
         private CircumstancesOfAccidentTestActions CircumstancesOfAccidentTestAction { get; }
@@ -21,6 +21,7 @@ namespace UniqueTest
 
         public NewAccidentMasterPage()
         {
+            
             BrowserSetUp = new BrowserSetUp();
             GeneralnformationTestActions = new GeneralnformationTestActions();
             CircumstancesOfAccidentTestAction = new CircumstancesOfAccidentTestActions();
@@ -32,17 +33,9 @@ namespace UniqueTest
 
         
 
-        public void BrowserSetUpFullfilment()
-        {
-           driver= BrowserSetUp.BrowserInit();
-
-            BrowserSetUp.
-                GoToUrl()
-                .VerifyTitle();
-        }
 
         
-        public void GeneralInformationFullfilment()
+        public void GeneralInformationFullfilment(IWebDriver driver)
         {
             GeneralnformationTestActions.InitPage(driver);
             GeneralnformationTestActions.PolicyNumberSectionFullfilment();
@@ -50,7 +43,7 @@ namespace UniqueTest
             GeneralnformationTestActions.AccidentTimeSectionFullfilement();
         }
         
-        public void CircumstancesofAccidentFullfilment()
+        public void CircumstancesofAccidentFullfilment(IWebDriver driver)
         {
             CircumstancesOfAccidentTestAction.PageInit(driver);
             CircumstancesOfAccidentTestAction.PlaceofAccidentSectionFullfilment();
@@ -61,35 +54,35 @@ namespace UniqueTest
             
         }
 
-         public void DescriptionOfDemageFulffilment()
+         public void DescriptionOfDemageFulffilment(IWebDriver driver)
         {
             DescriptionOfDemageTestActions.PageInit(driver);
             DescriptionOfDemageTestActions.VehicleDemageSectionFullfilment();
             DescriptionOfDemageTestActions.VehicleDetailsSectionFullfilment();
         }
-         public void PersonalDetailsFulfillment()
+         public void PersonalDetailsFulfillment(IWebDriver driver)
         {
             PersonalDetailsTestActions.InitPage(driver);
             PersonalDetailsTestActions.VehicleOwnerSectionFullfilment();
-            PersonalDetailsTestActions.MainOwnerPersonalDetailsSectionFullfilment();
+            PersonalDetailsTestActions.MainOwnerPersonalDetailsSectionFullfilment(driver);
             PersonalDetailsTestActions.MainOwnerRegisteredAdressSectionFullfilment();
             PersonalDetailsTestActions.AnotherQuestionSectionFullfilment();
         }
 
-        public void AdditionalInformationFullfilment()
+        public void AdditionalInformationFullfilment(IWebDriver driver)
         {
             AdditionalInformationTestActions.InitPage(driver);
             AdditionalInformationTestActions.RepairandRentSectionFullfilment();
-            AdditionalInformationTestActions.RegulationandAgreementSectionFullfilment();
+            AdditionalInformationTestActions.RegulationandAgreementSectionFullfilment(driver);
         }
 
-        public void SummaryPageCheck()
+        public void SummaryPageCheck(IWebDriver driver)
         {
             SummaryPageCheckTestAction.InitPage(driver);
             SummaryPageCheckTestAction.SummaryPageChekPolicyNumberSection();
         }
 
-         public bool DriverQuite()
+         public bool DriverQuite(IWebDriver driver)
         {
             driver.Quit();
             return true;

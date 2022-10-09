@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
 namespace UniqueTest
 {
-    public class PersonalDetailsPage:BrowserSetUp
+    public class PersonalDetailsPage:TestClass
     {
         
 
@@ -26,8 +22,9 @@ namespace UniqueTest
 
             return this;
         }
-        public PersonalDetailsPage EnterMainOwnerDetails(string Peselinner, NewAccidentMasterTestData.MainOwnerDetail MainOwnerDetailsValues)
+        public PersonalDetailsPage EnterMainOwnerDetails(string Peselinner, NewAccidentMasterTestData.MainOwnerDetail MainOwnerDetailsValues, IWebDriver driver)
         {
+           
             WebDriverWait WaitForPesel = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
             IWebElement Pesel = WaitForPesel.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("PERSON_OWNER_DATA-pesel")));
             Pesel.SendKeys(Peselinner);

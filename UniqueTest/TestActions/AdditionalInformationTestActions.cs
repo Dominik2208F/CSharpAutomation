@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using OpenQA.Selenium;
 
 namespace UniqueTest
@@ -10,7 +6,7 @@ namespace UniqueTest
     public class AdditionalInformationTestActions
     {
 
-        public IWebDriver driver;
+      
 
         public AdditionalInformationPage PersonalDetailsPageSection { get; set; }
      //   public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
@@ -27,10 +23,10 @@ namespace UniqueTest
                 .EnterCarandRentSection();    
         }
 
-        public void RegulationandAgreementSectionFullfilment()
+        public void RegulationandAgreementSectionFullfilment(IWebDriver driver)
         {
             PersonalDetailsPageSection.
-                EnterRegulationsandAgreement();
+                EnterRegulationsandAgreement(driver);
         }
 
 

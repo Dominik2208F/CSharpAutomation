@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using OpenQA.Selenium;
 
 namespace UniqueTest
@@ -10,7 +6,7 @@ namespace UniqueTest
     public class DescriptionOfDemageTestActions
     {
 
-       public IWebDriver driver;
+     
        public DescriptionOfDemagePage DescriptionOfDemagePage { get; set; }
      //  public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 

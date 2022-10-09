@@ -1,16 +1,11 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UniqueTest
 {
     public class CircumstancesOfAccidentTestActions
     {
 
-        public IWebDriver driver;
+       
         public CircumstancesofAccidentPage CircumstancesOfAccidentPage { get; set; }
       //  public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
 

@@ -1,15 +1,11 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace UniqueTest
 {
     public class SummaryPageCheckTestAction
     {
-        public IWebDriver driver;
+       
 
         public SummaryPageCheckPage SummaryPageCheckTestActionSection { get; set; }
        // public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }

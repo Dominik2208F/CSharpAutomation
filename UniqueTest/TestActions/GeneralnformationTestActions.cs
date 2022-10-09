@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UniqueTest
 {
@@ -11,7 +6,7 @@ namespace UniqueTest
 
     public class GeneralnformationTestActions
     {
-        public IWebDriver driver;
+      
         public GeneralInformationPage GeneralInformationPage { get;set; }
      //   public NewAccidentMasterTestData NewAccidentMasterTestData { get;set; }
         public void InitPage(IWebDriver driver)

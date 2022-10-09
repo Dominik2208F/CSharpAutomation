@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using OpenQA.Selenium;
 
 namespace UniqueTest
@@ -10,7 +6,7 @@ namespace UniqueTest
     public class PersonalDetailsTestActions
     {
 
-        public IWebDriver driver;
+       
 
         public PersonalDetailsPage PersonalDetailsPageSection { get; set; }
       //  public NewAccidentMasterTestData NewAccidentMasterTestData { get; set; }
@@ -26,9 +22,9 @@ namespace UniqueTest
             PersonalDetailsPageSection.EnterVehicleOwner();
         }
 
-        public void MainOwnerPersonalDetailsSectionFullfilment()
+        public void MainOwnerPersonalDetailsSectionFullfilment(IWebDriver driver)
         {
-            PersonalDetailsPageSection.EnterMainOwnerDetails( NewAccidentMasterTestData.PolcyHolderPesel,NewAccidentMasterTestData.GetMainOvnerDetails());
+            PersonalDetailsPageSection.EnterMainOwnerDetails( NewAccidentMasterTestData.PolcyHolderPesel,NewAccidentMasterTestData.GetMainOvnerDetails(),driver);
         }
         public void MainOwnerRegisteredAdressSectionFullfilment()
         {
