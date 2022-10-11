@@ -16,7 +16,6 @@ namespace UniqueTest
         public static string Postcode { get => "00-006"; }
         public static string PhoneNumber { get => "667546378"; }
         public  static string emailAdres { get => "email@example.com"; }
-
         public  static string DateofAccident { get => "12-12-2021"; }
         public static string DateHours { get => "12"; }
         public static string DataMinutes { get => "13"; }
@@ -31,15 +30,6 @@ namespace UniqueTest
         public static string IBAN { get => "PL27573289623065912671386189"; }
         // public static RegisteredDetails RegisterDetails => GetRegisteredDetails();
         // public MainOwnerDetail MainOwnerDetails { get=> GetMainOvnerDetails(); }
-
-
-
-
-
-
-
-
-
 
         public static  MainOwnerDetail GetMainOvnerDetails()
         {

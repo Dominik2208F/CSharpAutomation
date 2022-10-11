@@ -21,14 +21,11 @@ namespace UniqueTest
             SummaryCheck = new SummaryCheck(driver);
        //     NewAccidentMasterTestData = new NewAccidentMasterTestData();
         }
-
-
         public SummaryPageCheckPage CheckPolicyNumberFields()
         {
             Assert.AreEqual(NewAccidentMasterTestData.PolicyNumber,SummaryCheck.ExpectedPolicyNumber);
-            Console.WriteLine("Numer polisy został wygenerowany");
+            Console.WriteLine("Numer polisy został wygenerowanyw");
             return this;
         }
-
     }
 }
