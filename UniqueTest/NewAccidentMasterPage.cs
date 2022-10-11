@@ -8,9 +8,6 @@ namespace UniqueTest
     
     public class NewAccidentMasterPage
     {
-       
-        
-     //   private BrowserSetUp BrowserSetUp { get; }
         private AdditionalInformationTestActions AdditionalInformationTestActions { get; }
         private CircumstancesOfAccidentTestActions CircumstancesOfAccidentTestAction { get; }
         private DescriptionOfDemageTestActions DescriptionOfDemageTestActions { get; }
@@ -18,11 +15,8 @@ namespace UniqueTest
         private PersonalDetailsTestActions PersonalDetailsTestActions { get; }
         private SummaryPageCheckTestAction SummaryPageCheckTestAction { get; }
 
-      
        public NewAccidentMasterPage()
         {
-            
-           // BrowserSetUp = new BrowserSetUp();
             GeneralnformationTestActions = new GeneralnformationTestActions();
            CircumstancesOfAccidentTestAction = new CircumstancesOfAccidentTestActions();
            DescriptionOfDemageTestActions = new DescriptionOfDemageTestActions();
@@ -31,10 +25,6 @@ namespace UniqueTest
            SummaryPageCheckTestAction= new SummaryPageCheckTestAction();   
        }
 
-        
-
-
-        
         public NewAccidentMasterPage GeneralInformationFullfilment(IWebDriver driver)
         {
           //  GeneralnformationTestActions.InitPage(driver);

@@ -15,6 +15,7 @@ namespace UniqueTest
         public void TestInitalize()
         {
             driverInit =new ChromeDriver();
+
              new BrowserSetUp().
                 GoToUrl(driverInit)
                 .VerifyTitle(driverInit);

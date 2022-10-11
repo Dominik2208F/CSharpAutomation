@@ -6,16 +6,6 @@ namespace UniqueTest
 
     public class GeneralnformationTestActions
     {
-      
-     //   public GeneralInformationPage GeneralInformationPage { get;set; }
-     //   public NewAccidentMasterTestData NewAccidentMasterTestData { get;set; }
-      //  public void InitPage(IWebDriver driver)
-      //  {
-         //   GeneralInformationPage = new GeneralInformationPage(driver);
-            //  NewAccidentMasterTestData = new NewAccidentMasterTestData();   lub static property 
-      //  }
-
-
         public void PolicyNumberSectionFullfilment(IWebDriver driver)
         {
             new GeneralInformationPage(driver).
