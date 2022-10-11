@@ -82,11 +82,6 @@ namespace UniqueTest
             SummaryPageCheckTestAction.SummaryPageChekPolicyNumberSection();
         }
 
-         public bool DriverQuite(IWebDriver driver)
-        {
-            driver.Quit();
-            return true;
-        }
 
     }
 }
