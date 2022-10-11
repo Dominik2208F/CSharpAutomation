@@ -15,8 +15,7 @@ namespace UniqueTest
         public void TestInitalize()
         {
             driverInit =new ChromeDriver();
-            var Setup = new BrowserSetUp();
-            Setup.
+             new BrowserSetUp().
                 GoToUrl(driverInit)
                 .VerifyTitle(driverInit);
            
@@ -26,13 +25,13 @@ namespace UniqueTest
         [TestMethod]     
         public void AccidentTest()
         {
-            var Test = new NewAccidentMasterPage();
-            Test.GeneralInformationFullfilment(driverInit);
-            Test.CircumstancesofAccidentFullfilment(driverInit);
-            Test.DescriptionOfDemageFulffilment(driverInit);
-            Test.PersonalDetailsFulfillment(driverInit);
-            Test.AdditionalInformationFullfilment(driverInit);
-            Test.SummaryPageCheck(driverInit);
+            new NewAccidentMasterPage().
+                GeneralInformationFullfilment(driverInit).
+                CircumstancesofAccidentFullfilment(driverInit).
+                DescriptionOfDemageFulffilment(driverInit).
+                PersonalDetailsFulfillment(driverInit).
+                AdditionalInformationFullfilment(driverInit).
+                SummaryPageCheck(driverInit);
         }
         [TestCleanup]
         public void QuitTest()

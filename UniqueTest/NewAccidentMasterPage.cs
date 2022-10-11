@@ -35,15 +35,16 @@ namespace UniqueTest
 
 
         
-        public void GeneralInformationFullfilment(IWebDriver driver)
+        public NewAccidentMasterPage GeneralInformationFullfilment(IWebDriver driver)
         {
             GeneralnformationTestActions.InitPage(driver);
             GeneralnformationTestActions.PolicyNumberSectionFullfilment();
             GeneralnformationTestActions.PersonalDetailsSectionFullfilment();
             GeneralnformationTestActions.AccidentTimeSectionFullfilement();
+            return this;
         }
         
-        public void CircumstancesofAccidentFullfilment(IWebDriver driver)
+        public NewAccidentMasterPage CircumstancesofAccidentFullfilment(IWebDriver driver)
         {
             CircumstancesOfAccidentTestAction.PageInit(driver);
             CircumstancesOfAccidentTestAction.PlaceofAccidentSectionFullfilment();
@@ -51,35 +52,40 @@ namespace UniqueTest
             CircumstancesOfAccidentTestAction.ReasonsofAccidentSectionFullfilment();
             CircumstancesOfAccidentTestAction.DescriptionofAccidentSectionFullfilment();
             CircumstancesOfAccidentTestAction.AciddentQuestionsFulffilment();
+            return this;
             
         }
 
-         public void DescriptionOfDemageFulffilment(IWebDriver driver)
+         public NewAccidentMasterPage DescriptionOfDemageFulffilment(IWebDriver driver)
         {
             DescriptionOfDemageTestActions.PageInit(driver);
             DescriptionOfDemageTestActions.VehicleDemageSectionFullfilment();
             DescriptionOfDemageTestActions.VehicleDetailsSectionFullfilment();
+            return this;
         }
-         public void PersonalDetailsFulfillment(IWebDriver driver)
+         public NewAccidentMasterPage PersonalDetailsFulfillment(IWebDriver driver)
         {
             PersonalDetailsTestActions.InitPage(driver);
             PersonalDetailsTestActions.VehicleOwnerSectionFullfilment();
             PersonalDetailsTestActions.MainOwnerPersonalDetailsSectionFullfilment(driver);
             PersonalDetailsTestActions.MainOwnerRegisteredAdressSectionFullfilment();
             PersonalDetailsTestActions.AnotherQuestionSectionFullfilment();
+            return this;
         }
 
-        public void AdditionalInformationFullfilment(IWebDriver driver)
+        public NewAccidentMasterPage AdditionalInformationFullfilment(IWebDriver driver)
         {
             AdditionalInformationTestActions.InitPage(driver);
             AdditionalInformationTestActions.RepairandRentSectionFullfilment();
             AdditionalInformationTestActions.RegulationandAgreementSectionFullfilment(driver);
+            return this;
         }
 
-        public void SummaryPageCheck(IWebDriver driver)
+        public NewAccidentMasterPage SummaryPageCheck(IWebDriver driver)
         {
             SummaryPageCheckTestAction.InitPage(driver);
             SummaryPageCheckTestAction.SummaryPageChekPolicyNumberSection();
+            return this;
         }
 
 
