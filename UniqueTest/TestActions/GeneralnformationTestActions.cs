@@ -7,35 +7,36 @@ namespace UniqueTest
     public class GeneralnformationTestActions
     {
       
-        public GeneralInformationPage GeneralInformationPage { get;set; }
+     //   public GeneralInformationPage GeneralInformationPage { get;set; }
      //   public NewAccidentMasterTestData NewAccidentMasterTestData { get;set; }
-        public void InitPage(IWebDriver driver)
-        {
-            GeneralInformationPage = new GeneralInformationPage(driver);
+      //  public void InitPage(IWebDriver driver)
+      //  {
+         //   GeneralInformationPage = new GeneralInformationPage(driver);
             //  NewAccidentMasterTestData = new NewAccidentMasterTestData();   lub static property 
-        }
+      //  }
 
 
-        public void PolicyNumberSectionFullfilment()
+        public void PolicyNumberSectionFullfilment(IWebDriver driver)
         {
-            GeneralInformationPage.
+            new GeneralInformationPage(driver).
                 EnterPolicyNumber(NewAccidentMasterTestData.PolicyNumber)
                 .EnterRegistrationNumber(NewAccidentMasterTestData.RegistrationNumber);            
         }
 
-        public void PersonalDetailsSectionFullfilment()
+        public void PersonalDetailsSectionFullfilment(IWebDriver driver)
         {
-            GeneralInformationPage.EnterPolicyHolderData(NewAccidentMasterTestData.PolicyHolderName, NewAccidentMasterTestData.PolicyHolderSurname, NewAccidentMasterTestData.PolcyHolderPesel)
+            new GeneralInformationPage(driver)
+               .EnterPolicyHolderData(NewAccidentMasterTestData.PolicyHolderName, NewAccidentMasterTestData.PolicyHolderSurname, NewAccidentMasterTestData.PolcyHolderPesel)
                .EnterHouseDetails(NewAccidentMasterTestData.Street, NewAccidentMasterTestData.HouseNumber, NewAccidentMasterTestData.ApartmentNUmber)
                .EnterPostcode(NewAccidentMasterTestData.Postcode)
                .EnterPersonalContantDetail(NewAccidentMasterTestData.PhoneNumber, NewAccidentMasterTestData.emailAdres, NewAccidentMasterTestData.emailAdres);
                 
         }
 
-        public void AccidentTimeSectionFullfilement()
+        public void AccidentTimeSectionFullfilement(IWebDriver driver)
         {
-            GeneralInformationPage
-            .EnterAccidentTime(NewAccidentMasterTestData.DateofAccident, NewAccidentMasterTestData.DateHours, NewAccidentMasterTestData.DataMinutes);
+            new GeneralInformationPage(driver)
+             .EnterAccidentTime(NewAccidentMasterTestData.DateofAccident, NewAccidentMasterTestData.DateHours, NewAccidentMasterTestData.DataMinutes);
         }
     
     }

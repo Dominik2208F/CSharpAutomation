@@ -10,7 +10,7 @@ namespace UniqueTest
     {
        
         
-        private BrowserSetUp BrowserSetUp { get; }
+     //   private BrowserSetUp BrowserSetUp { get; }
         private AdditionalInformationTestActions AdditionalInformationTestActions { get; }
         private CircumstancesOfAccidentTestActions CircumstancesOfAccidentTestAction { get; }
         private DescriptionOfDemageTestActions DescriptionOfDemageTestActions { get; }
@@ -18,18 +18,18 @@ namespace UniqueTest
         private PersonalDetailsTestActions PersonalDetailsTestActions { get; }
         private SummaryPageCheckTestAction SummaryPageCheckTestAction { get; }
 
-
-        public NewAccidentMasterPage()
+      
+       public NewAccidentMasterPage()
         {
             
-            BrowserSetUp = new BrowserSetUp();
+           // BrowserSetUp = new BrowserSetUp();
             GeneralnformationTestActions = new GeneralnformationTestActions();
-            CircumstancesOfAccidentTestAction = new CircumstancesOfAccidentTestActions();
-            DescriptionOfDemageTestActions = new DescriptionOfDemageTestActions();
+           CircumstancesOfAccidentTestAction = new CircumstancesOfAccidentTestActions();
+           DescriptionOfDemageTestActions = new DescriptionOfDemageTestActions();
             AdditionalInformationTestActions = new AdditionalInformationTestActions();
-            PersonalDetailsTestActions = new PersonalDetailsTestActions();
-            SummaryPageCheckTestAction= new SummaryPageCheckTestAction();   
-        }
+           PersonalDetailsTestActions = new PersonalDetailsTestActions();
+           SummaryPageCheckTestAction= new SummaryPageCheckTestAction();   
+       }
 
         
 
@@ -37,10 +37,10 @@ namespace UniqueTest
         
         public NewAccidentMasterPage GeneralInformationFullfilment(IWebDriver driver)
         {
-            GeneralnformationTestActions.InitPage(driver);
-            GeneralnformationTestActions.PolicyNumberSectionFullfilment();
-            GeneralnformationTestActions.PersonalDetailsSectionFullfilment();
-            GeneralnformationTestActions.AccidentTimeSectionFullfilement();
+          //  GeneralnformationTestActions.InitPage(driver);
+            GeneralnformationTestActions.PolicyNumberSectionFullfilment(driver);
+            GeneralnformationTestActions.PersonalDetailsSectionFullfilment(driver);
+            GeneralnformationTestActions.AccidentTimeSectionFullfilement(driver);
             return this;
         }
         
