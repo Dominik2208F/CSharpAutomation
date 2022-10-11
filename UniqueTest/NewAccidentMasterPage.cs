@@ -6,18 +6,17 @@ using OpenQA.Selenium;
 namespace UniqueTest
 {
     
-    public class NewAccidentMasterPage
+    public class NewAccidentMasterPage:TestClass
     {
         private AdditionalInformationTestActions AdditionalInformationTestActions { get; }
         private CircumstancesOfAccidentTestActions CircumstancesOfAccidentTestAction { get; }
         private DescriptionOfDemageTestActions DescriptionOfDemageTestActions { get; }
-        private GeneralnformationTestActions GeneralnformationTestActions { get; }
         private PersonalDetailsTestActions PersonalDetailsTestActions { get; }
         private SummaryPageCheckTestAction SummaryPageCheckTestAction { get; }
 
        public NewAccidentMasterPage()
         {
-            GeneralnformationTestActions = new GeneralnformationTestActions();
+           // GeneralnformationTestActions = new GeneralnformationTestActions(driverInit);
            CircumstancesOfAccidentTestAction = new CircumstancesOfAccidentTestActions();
            DescriptionOfDemageTestActions = new DescriptionOfDemageTestActions();
             AdditionalInformationTestActions = new AdditionalInformationTestActions();
@@ -25,16 +24,16 @@ namespace UniqueTest
            SummaryPageCheckTestAction= new SummaryPageCheckTestAction();   
        }
 
-        public NewAccidentMasterPage GeneralInformationFullfilment(IWebDriver driver)
+        public NewAccidentMasterPage GeneralInformationFullfilment(IWebDriver driver) // new call
         {
-          //  GeneralnformationTestActions.InitPage(driver);
-            GeneralnformationTestActions.PolicyNumberSectionFullfilment(driver);
-            GeneralnformationTestActions.PersonalDetailsSectionFullfilment(driver);
-            GeneralnformationTestActions.AccidentTimeSectionFullfilement(driver);
+            new GeneralnformationTestActions(driver)
+                .PolicyNumberSectionFullfilment(driver).
+                    PersonalDetailsSectionFullfilment(driver).
+                         AccidentTimeSectionFullfilement(driver);
             return this;
         }
         
-        public NewAccidentMasterPage CircumstancesofAccidentFullfilment(IWebDriver driver)
+        public NewAccidentMasterPage CircumstancesofAccidentFullfilment(IWebDriver driver) // another call
         {
             CircumstancesOfAccidentTestAction.PageInit(driver);
             CircumstancesOfAccidentTestAction.PlaceofAccidentSectionFullfilment();
