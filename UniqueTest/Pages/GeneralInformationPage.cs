@@ -1,6 +1,7 @@
 ﻿
 using OpenQA.Selenium;
-
+using System.Activities;
+using System.Collections.Generic;
 
 namespace UniqueTest
 {
@@ -63,5 +64,7 @@ namespace UniqueTest
             GeneralInformationSection.NextPageButtonToCircumstances.Click();
             return this;
         }
+        
+        
     }
 }

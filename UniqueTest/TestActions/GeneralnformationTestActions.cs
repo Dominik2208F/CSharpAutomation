@@ -17,15 +17,15 @@ namespace UniqueTest
         {
             new GeneralInformationPage(driver).
                 EnterPolicyNumber(NewAccidentMasterTestData.PolicyNumber)
-                .EnterRegistrationNumber(NewAccidentMasterTestData.RegistrationNumber);
+                .EnterRegistrationNumber(RegistrationNumber);
             return this;
         }
 
         public GeneralnformationTestActions PersonalDetailsSectionFullfilment(IWebDriver driver)
         {
             new GeneralInformationPage(driver)
-               .EnterPolicyHolderData(NewAccidentMasterTestData.PolicyHolderName, NewAccidentMasterTestData.PolicyHolderSurname, NewAccidentMasterTestData.PolcyHolderPesel)
-               .EnterHouseDetails(NewAccidentMasterTestData.Street, NewAccidentMasterTestData.HouseNumber, NewAccidentMasterTestData.ApartmentNUmber)
+               .EnterPolicyHolderData(Name, Surname, NewAccidentMasterTestData.PolcyHolderPesel)
+               .EnterHouseDetails(StreetEnum, NewAccidentMasterTestData.HouseNumber, NewAccidentMasterTestData.ApartmentNUmber)
                .EnterPostcode(NewAccidentMasterTestData.Postcode)
                .EnterPersonalContantDetail(NewAccidentMasterTestData.PhoneNumber, NewAccidentMasterTestData.emailAdres, NewAccidentMasterTestData.emailAdres);
                 return this;
@@ -36,7 +36,26 @@ namespace UniqueTest
             new GeneralInformationPage(driver)
              .EnterAccidentTime(NewAccidentMasterTestData.DateofAccident, NewAccidentMasterTestData.DateHours, NewAccidentMasterTestData.DataMinutes);
         }
-    
+
+
+
+
+
+        string Name = AccidentData.Jan.ToString();
+        string Surname = AccidentData.Kowalski.ToString();
+        string StreetEnum = AccidentData.Sezamkowa.ToString();
+       public string RegistrationNumber = AccidentData.WPR140A.ToString();
+
+
+
+        public enum AccidentData
+        {
+            Jan,
+            Kowalski,
+            Sezamkowa,
+            WPR140A,
+        }
+
     }
 
 

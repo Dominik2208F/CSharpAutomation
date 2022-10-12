@@ -5,12 +5,10 @@ namespace UniqueTest
 {
     public  class NewAccidentMasterTestData
     {
-       public static string PolicyNumber { get => "55555555"; }
+
+        public static string PolicyNumber { get => "55555555"; }
        public  static string RegistrationNumber {  get=> "WPR140A"; }
-       public static string PolicyHolderName { get => "Jan"; }
-       public static string PolicyHolderSurname { get => " Kowalski"; }
        public static string PolcyHolderPesel { get => "70040718298"; }
-       public static string Street { get => " Sezamkowa"; }
         public static string HouseNumber { get => "2"; }
         public static string ApartmentNUmber { get => "3"; }
         public static string Postcode { get => "00-006"; }
@@ -85,6 +83,7 @@ namespace UniqueTest
 
         }
 
+        
 
 
     }
