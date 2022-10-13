@@ -1,8 +1,6 @@
 ﻿
 using OpenQA.Selenium;
-
-
-
+using System.Collections.Generic;
 
 namespace UniqueTest
 {
@@ -29,10 +27,10 @@ namespace UniqueTest
             DescriptionOfDemageSection.YearofProduction.SendKeys(year);
             return this;
         }
-        public DescriptionOfDemagePage EnterDemagedVehicleDatafromProofOfRegistration(string registrationNumber, string vin,string BMW,string Registrationdate)
+        public DescriptionOfDemagePage EnterDemagedVehicleDatafromProofOfRegistration(string registrationNumber, List<string> vin ,string BMW,string Registrationdate)
         {
             DescriptionOfDemageSection.RegistrationNumber.SendKeys(registrationNumber);
-            DescriptionOfDemageSection.VinNUmber.SendKeys(vin);
+            DescriptionOfDemageSection.VinNUmber.SendKeys(vin[2]);
             DescriptionOfDemageSection.WebsiteLoad();
             DescriptionOfDemageSection.ChooseMark.Click();
             DescriptionOfDemageSection.ChooseMark.SendKeys(BMW);

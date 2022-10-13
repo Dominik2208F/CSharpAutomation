@@ -25,8 +25,8 @@ namespace UniqueTest
         {
             new GeneralInformationPage(driver)
                .EnterPolicyHolderData(Name, Surname, NewAccidentMasterTestData.PolcyHolderPesel)
-               .EnterHouseDetails(StreetEnum, NewAccidentMasterTestData.HouseNumber, NewAccidentMasterTestData.ApartmentNUmber)
-               .EnterPostcode(NewAccidentMasterTestData.Postcode)
+               .EnterHouseDetails(StreetEnum, NewAccidentMasterTestData.Numbers())
+               .EnterPostcode(NewAccidentMasterTestData.GetRegisteredDetails())
                .EnterPersonalContantDetail(NewAccidentMasterTestData.PhoneNumber, NewAccidentMasterTestData.emailAdres, NewAccidentMasterTestData.emailAdres);
                 return this;
         }

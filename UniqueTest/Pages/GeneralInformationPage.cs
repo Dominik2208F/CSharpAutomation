@@ -34,16 +34,16 @@ namespace UniqueTest
             GeneralInformationSection.PolicyHolderPesel.SendKeys(PolicyHolderPesel);
             return this;
         }
-        public GeneralInformationPage EnterHouseDetails(string Street, string HouseNumber,string ApartamentNumber)
+        public GeneralInformationPage EnterHouseDetails(string Street, List<string> Numberlist)
         {
             GeneralInformationSection.Street.SendKeys(Street);
-            GeneralInformationSection.NumberofHause.SendKeys(HouseNumber);
-            GeneralInformationSection.NumberOfApartament.SendKeys(ApartamentNumber);
+            GeneralInformationSection.NumberofHause.SendKeys(Numberlist[0]);
+            GeneralInformationSection.NumberOfApartament.SendKeys(Numberlist[1]);
             return this;
         }
-        public GeneralInformationPage EnterPostcode( string Poscode)
+        public GeneralInformationPage EnterPostcode(NewAccidentMasterTestData.RegisteredDetails RegisteredDetailsValues)
         {
-            GeneralInformationSection.Postcode.SendKeys(Poscode);
+            GeneralInformationSection.Postcode.SendKeys(RegisteredDetailsValues.PostalCode);
             return this;
         }
         public GeneralInformationPage EnterPersonalContantDetail(string Phone, string Email,string EmailConfirmation)
