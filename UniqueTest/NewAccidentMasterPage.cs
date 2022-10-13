@@ -33,7 +33,7 @@ namespace UniqueTest
             return this;
         }
         
-        public NewAccidentMasterPage CircumstancesofAccidentFullfilment(IWebDriver driver) // another call
+        public NewAccidentMasterPage CircumstancesofAccidentFullfilment(IWebDriver driver) 
         {
             CircumstancesOfAccidentTestAction.PageInit(driver);
             CircumstancesOfAccidentTestAction.PlaceofAccidentSectionFullfilment();

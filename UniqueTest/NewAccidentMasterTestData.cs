@@ -5,14 +5,9 @@ namespace UniqueTest
 {
     public  class NewAccidentMasterTestData
     {
-
-
         public static string PolicyNumber { get => "55555555"; }
        public  static string RegistrationNumber {  get=> "WPR140A"; }
        public static string PolcyHolderPesel { get => "70040718298"; }
-     //   public static string HouseNumber { get => "2"; }
-      //  public static string ApartmentNUmber { get => "3"; }
-      //  public static string Postcode { get => "00-006"; }
         public static string PhoneNumber { get => "667546378"; }
         public  static string emailAdres { get => "email@example.com"; }
         public  static string DateofAccident { get => "12-12-2021"; }
@@ -37,8 +32,6 @@ namespace UniqueTest
         {
             return new RegisteredDetails("00-006", " Orzeszkowa", "2", "3");
         }
-
-
 
         public struct RegisteredDetails
         {
@@ -93,7 +86,5 @@ namespace UniqueTest
             list.Add(VinNumber);
             return list;
         }
-
-
     }
 }
