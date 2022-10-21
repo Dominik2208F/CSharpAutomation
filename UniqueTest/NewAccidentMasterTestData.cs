@@ -6,10 +6,10 @@ namespace UniqueTest
     public  class NewAccidentMasterTestData
     {
         public static string PolicyNumber { get => "55555555"; }
-       public  static string RegistrationNumber {  get=> "WPR140A"; }
-       public static string PolcyHolderPesel { get => "70040718298"; }
+        public  static string RegistrationNumber {  get=> "WPR140A"; }
+        public static string PolcyHolderPesel { get => "70040718298"; }
         public static string PhoneNumber { get => "667546378"; }
-        public  static string emailAdres { get => "email@example.com"; }
+        public  static string EmailAdress { get => "email@example.com"; }
         public  static string DateofAccident { get => "12-12-2021"; }
         public static string DateHours { get => "12"; }
         public static string DataMinutes { get => "13"; }
