@@ -27,7 +27,7 @@ namespace UniqueTest
                .EnterPolicyHolderData(Name, Surname, NewAccidentMasterTestData.PolcyHolderPesel)
                .EnterHouseDetails(StreetEnum, NewAccidentMasterTestData.Numbers())
                .EnterPostcode(NewAccidentMasterTestData.GetRegisteredDetails())
-               .EnterPersonalContantDetail(NewAccidentMasterTestData.PhoneNumber, NewAccidentMasterTestData.emailAdres, NewAccidentMasterTestData.emailAdres);
+               .EnterPersonalContantDetail(NewAccidentMasterTestData.PhoneNumber, NewAccidentMasterTestData.EmailAdress, NewAccidentMasterTestData.EmailAdress);
                 return this;
         }
 
