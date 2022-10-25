@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserSetUp.cs" />
+    <Compile Include="Enumerations\AccidentData.cs" />
     <Compile Include="Pages\AdditionalInformationPage.cs" />
     <Compile Include="Pages\SummaryPageCheckPage.cs" />
     <Compile Include="Pages\PersonalDetailsPage.cs" />

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using UniqueTest.Enumerations;
 
 namespace UniqueTest
 {
@@ -17,15 +18,15 @@ namespace UniqueTest
         {
             new GeneralInformationPage(driver).
                 EnterPolicyNumber(NewAccidentMasterTestData.PolicyNumber)
-                .EnterRegistrationNumber(RegistrationNumber);
+                .EnterRegistrationNumber(NewAccidentMasterTestData.RegistrationNumber);
             return this;
         }
 
         public GeneralnformationTestActions PersonalDetailsSectionFullfilment(IWebDriver driver)
         {
             new GeneralInformationPage(driver)
-               .EnterPolicyHolderData(Name, Surname, NewAccidentMasterTestData.PolcyHolderPesel)
-               .EnterHouseDetails(StreetEnum, NewAccidentMasterTestData.Numbers())
+               .EnterPolicyHolderData(NewAccidentMasterTestData.Name, NewAccidentMasterTestData.Surname, NewAccidentMasterTestData.PolcyHolderPesel)
+               .EnterHouseDetails(NewAccidentMasterTestData.StreetEnum, NewAccidentMasterTestData.Numbers())
                .EnterPostcode(NewAccidentMasterTestData.GetRegisteredDetails())
                .EnterPersonalContantDetail(NewAccidentMasterTestData.PhoneNumber, NewAccidentMasterTestData.EmailAdress, NewAccidentMasterTestData.EmailAdress);
                 return this;
@@ -39,22 +40,12 @@ namespace UniqueTest
 
 
 
+        
 
-
-        string Name = AccidentData.Jan.ToString();
-        string Surname = AccidentData.Kowalski.ToString();
-        string StreetEnum = AccidentData.Sezamkowa.ToString();
-       public string RegistrationNumber = AccidentData.WPR140A.ToString();
+        
 
 
 
-        public enum AccidentData
-        {
-            Jan,
-            Kowalski,
-            Sezamkowa,
-            WPR140A,
-        }
 
     }
 

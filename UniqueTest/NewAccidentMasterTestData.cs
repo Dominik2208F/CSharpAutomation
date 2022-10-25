@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using UniqueTest.Enumerations;
 
 namespace UniqueTest
 {
     public  class NewAccidentMasterTestData
     {
+        // static = no instance of class
         public static string PolicyNumber { get => "55555555"; }
-        public  static string RegistrationNumber {  get=> "WPR140A"; }
         public static string PolcyHolderPesel { get => "70040718298"; }
         public static string PhoneNumber { get => "667546378"; }
-        public  static string EmailAdress { get => "email@example.com"; }
-        public  static string DateofAccident { get => "12-12-2021"; }
+        public static string EmailAdress { get => "email@example.com"; }
+        public static string DateofAccident { get => "12-12-2021"; }
         public static string DateHours { get => "12"; }
         public static string DataMinutes { get => "13"; }
         public static string PLaceofAccident { get => "Warszawa"; }
@@ -20,13 +21,17 @@ namespace UniqueTest
         public static string Brand { get => "BMW"; }
         public static string Model { get=> "Seria 3 [E90] 05-08"; }
         public static string FirstRegistrationDate { get => "02-02-2008"; }
-      
+
+        public static string Name = AccidentData.Jan.ToString(); //sendkeys wymaga stringa/ inaczej typ AccidentData
+        public static string Surname = AccidentData.Kowalski.ToString();
+        public static string StreetEnum = AccidentData.Sezamkowa.ToString();
+        public static string RegistrationNumber = AccidentData.WPR140A.ToString();
+
 
         public static  MainOwnerDetail GetMainOvnerDetails()
         {
             return new MainOwnerDetail("Jan", "Kowalski", "70040718298", "667546378", "email@example.com", "PL27573289623065912671386189");
         }
-
 
         public static RegisteredDetails GetRegisteredDetails()
         {
