@@ -29,7 +29,7 @@ namespace UniqueTest.Ryanair.TestActions
                 EnterDepartue("Warszawa-Modlin").
                 EnterArrival("Dowolny Kierunek")
                 .EnterDataofFly().CheckifSiteisLoaded(driver).
-                 ChooseYourFly();
+                ChooseYourFly();
 
             return this;
         }
