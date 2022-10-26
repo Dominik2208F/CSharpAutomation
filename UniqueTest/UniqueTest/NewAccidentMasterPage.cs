@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 namespace UniqueTest
 {
     
-    public class NewAccidentMasterPage:TestClass
+    public class NewAccidentMasterPage
     {
         private AdditionalInformationTestActions AdditionalInformationTestActions { get; }
         private CircumstancesOfAccidentTestActions CircumstancesOfAccidentTestAction { get; }

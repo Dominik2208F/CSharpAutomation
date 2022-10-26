@@ -1,25 +1,27 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-
-
+using OpenQA.Selenium.Support.UI;
+using System;
+using System.Threading;
+using UniqueTest.Ryanair;
 
 namespace UniqueTest
 {
     [TestClass]
-    public class TestClass 
+    public class TestClass
     {
-        public IWebDriver driverInit;
-       
+        public  IWebDriver driverInit;
+
         [TestInitialize]
         public void TestInitalize()
         {
-            driverInit =new ChromeDriver();
-           
-    }
-       
+            driverInit = new ChromeDriver();
 
-        [TestMethod]     
+        }
+
+
+        [TestMethod]
         public void AccidentTest()
         {
 
@@ -36,10 +38,25 @@ namespace UniqueTest
                 AdditionalInformationFullfilment(driverInit).
                 SummaryPageCheck(driverInit);
         }
+
+
+        [TestMethod]
+        public void Ryanair()
+        {
+            new Browser().
+                NavigateToUrl(driverInit).
+                VerifyTitle(driverInit);
+
+            new RyanairMasterPage()
+                 .HomePageFlyInformationFullfilment(driverInit);
+        }
+
+
+
         [TestCleanup]
         public void QuitTest()
         {
-            driverInit.Quit();
+          // driverInit.Quit();
         }
 
     }

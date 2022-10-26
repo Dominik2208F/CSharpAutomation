@@ -60,29 +60,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrowserSetUp.cs" />
-    <Compile Include="Enumerations\AccidentData.cs" />
-    <Compile Include="Pages\AdditionalInformationPage.cs" />
-    <Compile Include="Pages\SummaryPageCheckPage.cs" />
-    <Compile Include="Pages\PersonalDetailsPage.cs" />
-    <Compile Include="Pages\DescriptionOfDemagePage.cs" />
-    <Compile Include="Sections\AdditionalInformation.cs" />
-    <Compile Include="Sections\SummaryCheck.cs" />
-    <Compile Include="Sections\PersonalDetails.cs" />
-    <Compile Include="Sections\DescriptionofDemage.cs" />
-    <Compile Include="TestActions\SummaryPageCheckTestAction.cs" />
+    <Compile Include="Ryanair\Browser.cs" />
+    <Compile Include="Ryanair\RyanairMasterPage.cs" />
+    <Compile Include="Ryanair\Pages\HomePageFlyInformationPage.cs" />
+    <Compile Include="Ryanair\Sections\HomePageFlyInformation.cs" />
+    <Compile Include="Ryanair\TestActions\RyanairHomePageActions.cs" />
+    <Compile Include="UniqueTest\BrowserSetUp.cs" />
+    <Compile Include="UniqueTest\Enumerations\AccidentData.cs" />
+    <Compile Include="UniqueTest\Pages\AdditionalInformationPage.cs" />
+    <Compile Include="UniqueTest\Pages\SummaryPageCheckPage.cs" />
+    <Compile Include="UniqueTest\Pages\PersonalDetailsPage.cs" />
+    <Compile Include="UniqueTest\Pages\DescriptionOfDemagePage.cs" />
+    <Compile Include="UniqueTest\Sections\AdditionalInformation.cs" />
+    <Compile Include="UniqueTest\Sections\SummaryCheck.cs" />
+    <Compile Include="UniqueTest\Sections\PersonalDetails.cs" />
+    <Compile Include="UniqueTest\Sections\DescriptionofDemage.cs" />
+    <Compile Include="UniqueTest\TestActions\SummaryPageCheckTestAction.cs" />
     <Compile Include="TestClass.cs" />
-    <Compile Include="NewAccidentMasterTestData.cs" />
-    <Compile Include="Pages\CircumstancesofAccidentPage.cs" />
-    <Compile Include="Pages\GeneralInformationPage.cs" />
-    <Compile Include="Sections\CircumstancesofAccident.cs" />
-    <Compile Include="Sections\GeneralInformation.cs" />
-    <Compile Include="TestActions\CircumstancesOfAccidentTestActions.cs" />
-    <Compile Include="NewAccidentMasterPage.cs" />
-    <Compile Include="TestActions\AdditionalInformationTestActions.cs" />
-    <Compile Include="TestActions\PersonalDetailsTestActions.cs" />
-    <Compile Include="TestActions\DescriptionOfDemageTestActions.cs" />
-    <Compile Include="TestActions\GeneralnformationTestActions.cs" />
+    <Compile Include="UniqueTest\NewAccidentMasterTestData.cs" />
+    <Compile Include="UniqueTest\Pages\CircumstancesofAccidentPage.cs" />
+    <Compile Include="UniqueTest\Pages\GeneralInformationPage.cs" />
+    <Compile Include="UniqueTest\Sections\CircumstancesofAccident.cs" />
+    <Compile Include="UniqueTest\Sections\GeneralInformation.cs" />
+    <Compile Include="UniqueTest\TestActions\CircumstancesOfAccidentTestActions.cs" />
+    <Compile Include="UniqueTest\NewAccidentMasterPage.cs" />
+    <Compile Include="UniqueTest\TestActions\AdditionalInformationTestActions.cs" />
+    <Compile Include="UniqueTest\TestActions\PersonalDetailsTestActions.cs" />
+    <Compile Include="UniqueTest\TestActions\DescriptionOfDemageTestActions.cs" />
+    <Compile Include="UniqueTest\TestActions\GeneralnformationTestActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
