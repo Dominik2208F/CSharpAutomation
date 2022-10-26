@@ -15,11 +15,6 @@ namespace UniqueTest
         public void TestInitalize()
         {
             driverInit =new ChromeDriver();
-
-             new BrowserSetUp().
-                GoToUrl(driverInit)
-                .VerifyTitle(driverInit);
-            
            
     }
        
@@ -27,6 +22,12 @@ namespace UniqueTest
         [TestMethod]     
         public void AccidentTest()
         {
+
+            new BrowserSetUp().
+                GoToUrl(driverInit)
+                .VerifyTitle(driverInit);
+
+
             new NewAccidentMasterPage().
                 GeneralInformationFullfilment(driverInit).
                 CircumstancesofAccidentFullfilment(driverInit).
