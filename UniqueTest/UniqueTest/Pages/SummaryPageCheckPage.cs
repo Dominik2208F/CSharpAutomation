@@ -19,12 +19,13 @@ namespace UniqueTest
         public SummaryPageCheckPage(IWebDriver driver)
         {
             SummaryCheck = new SummaryCheck(driver);
+            PersonalDetailsSection = new PersonalDetails(driver);
        //     NewAccidentMasterTestData = new NewAccidentMasterTestData();
         }
         public SummaryPageCheckPage CheckPolicyNumberFields()
         {
-            Assert.AreEqual(NewAccidentMasterTestData.PolicyNumber,SummaryCheck.ExpectedPolicyNumber);
-            Console.WriteLine("Numer polisy został wygenerowanyw");
+            Assert.IsTrue(PersonalDetailsSection.SummaryPagePolicy.Displayed);
+            Console.WriteLine("Numer polisy został wygenerowany");
             return this;
         }
     }

@@ -31,5 +31,7 @@ namespace UniqueTest
         public IWebElement IndividualSelectButton => Driver.FindElement(By.XPath("//div[@id='victim-individual-drivers-common-select-button']"));
         public IWebElement IndividualSelect => Driver.FindElement(By.XPath("/html[1]/body[1]/lynx-app-root[1]/lynx-liability-insurance[1]/div[1]/lynx-vehicle-owner-liability-insurance[1]/form[1]/common-card[3]/div[1]/div[2]/div[1]/common-select[1]/app-fieldset[1]/fieldset[1]/div[1]/div[1]/div[2]/ul[1]/li[1]"));
         public IWebElement NextPageButton => Driver.FindElement(By.Id("next-page"));
+
+        public IWebElement SummaryPagePolicy => Driver.FindElement(By.Id("BASIC_INFO.POLICY_NUMBER.POLICY_NUMBER"));
     }
 }
