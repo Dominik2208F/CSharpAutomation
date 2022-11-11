@@ -56,7 +56,7 @@ namespace UniqueTest
         [TestCleanup]
         public void QuitTest()
         {
-          // driverInit.Quit();
+           driverInit.Quit();
         }
 
     }
